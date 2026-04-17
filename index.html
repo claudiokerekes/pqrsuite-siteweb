@@ -3,8 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PQR Suite — Gestión de Peticiones, Quejas y Reclamos para Copropiedades</title>
-  <meta name="description" content="Plataforma centralizada para gestionar peticiones, quejas y reclamos de copropiedades, edificios y condominios. Respuesta garantizada, métricas en tiempo real.">
+  <title>PQR Suite — Software de Administración de Propiedad Horizontal | Gestión PQR con IA</title>
+  <meta name="description" content="PQR Suite es la plataforma líder en administración de propiedad horizontal. Gestiona peticiones, quejas y reclamos con inteligencia artificial: primera respuesta en menos de 2 horas, métricas en tiempo real y comunicación centralizada para copropiedades, edificios y condominios.">
+  <meta name="keywords" content="administracion de propiedad horizontal, gestion de propiedad horizontal, software copropiedad, PQR copropiedades, peticiones quejas reclamos, administracion edificios, software administradora, gestion conjuntos residenciales, plataforma copropiedad, PQR inteligencia artificial">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="PQR Suite">
+  <link rel="canonical" href="https://pqrsuite.com/">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="shortcut icon" href="favicon.svg">
+  <meta name="geo.region" content="CO">
+  <meta name="language" content="es">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pqrsuite.com/">
+  <meta property="og:title" content="PQR Suite — Software de Administración de Propiedad Horizontal con IA">
+  <meta property="og:description" content="Gestiona peticiones, quejas y reclamos de tu copropiedad con inteligencia artificial. Primera respuesta garantizada en menos de 2 horas. Prueba gratis 30 días.">
+  <meta property="og:image" content="https://pqrsuite.com/og-image.png">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="PQR Suite">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PQR Suite — Administración de Propiedad Horizontal con IA">
+  <meta name="twitter:description" content="Centraliza la gestión de PQR de tu copropiedad. IA para clasificar casos, respuesta en &lt;2h y métricas en tiempo real.">
+  <meta name="twitter:image" content="https://pqrsuite.com/og-image.png">
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PQR Suite",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Software de administración de propiedad horizontal para gestionar peticiones, quejas y reclamos con inteligencia artificial. Solución centralizada para copropiedades, edificios y conjuntos residenciales.",
+    "url": "https://pqrsuite.com",
+    "inLanguage": "es",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "99",
+      "highPrice": "249",
+      "priceCurrency": "USD",
+      "offerCount": "3"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "350",
+      "bestRating": "5"
+    },
+    "featureList": [
+      "Gestión de peticiones quejas y reclamos",
+      "Administración de propiedad horizontal",
+      "Inteligencia artificial para clasificación de casos",
+      "Portal del residente",
+      "Notificaciones automáticas",
+      "Reportes y analítica avanzada"
+    ]
+  }
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RET8SDQNM5"></script>
   <script>
@@ -635,6 +693,8 @@
       .hero-visual { display: none; }
       .metrics-grid { grid-template-columns: repeat(2, 1fr); }
       .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .ai-grid { grid-template-columns: 1fr !important; }
+      .ai-grid > .glass-card:first-child { grid-row: auto !important; }
       .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
       .steps-grid::before { display: none; }
       .demo-dash-grid { grid-template-columns: 1fr; }
@@ -834,20 +894,6 @@
   </div>
 </header>
 
-<!-- ═══════════════════ LOGOS ═══════════════════ -->
-<section class="logos-section" aria-label="Clientes que confían en PQR Suite">
-  <div class="container">
-    <p class="logos-label">Confiado por las mejores administradoras del país</p>
-    <div class="logos-track" role="list">
-      <span class="logo-item" role="listitem">Grupo Inmobiliario</span>
-      <span class="logo-item" role="listitem">Admin Central</span>
-      <span class="logo-item" role="listitem">Torres Norte</span>
-      <span class="logo-item" role="listitem">Gestión PH</span>
-      <span class="logo-item" role="listitem">Copropiedad360</span>
-      <span class="logo-item" role="listitem">Residences Corp</span>
-    </div>
-  </div>
-</section>
 
 <!-- ═══════════════════ METRICS ═══════════════════ -->
 <section class="section" id="metrics" aria-labelledby="metrics-heading">
@@ -894,6 +940,97 @@
         <div class="metric-label">Satisfacción promedio</div>
         <div class="metric-sublabel">Calificación de residentes</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ AI SECTION ═══════════════════ -->
+<section class="section" id="ia" style="background:linear-gradient(180deg,transparent 0%,rgba(79,70,229,0.05) 50%,transparent 100%)" aria-labelledby="ai-heading">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="badge" style="border-color:rgba(99,102,241,0.3);color:var(--accent-light)">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/><circle cx="18" cy="5" r="3" fill="currentColor"/></svg>
+        Inteligencia Artificial
+      </span>
+      <h2 id="ai-heading">La IA que transforma la<br><span class="gradient-text-accent">administración de propiedad horizontal</span></h2>
+      <p>PQR Suite incorpora inteligencia artificial para automatizar tareas repetitivas, reducir tiempos de respuesta y ayudar a tu equipo a tomar mejores decisiones en la gestión de copropiedades.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px" class="ai-grid">
+
+      <!-- Left column: large card -->
+      <div class="glass-card fade-up" style="padding:40px;position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(79,70,229,0.1) 0%,rgba(6,182,212,0.05) 100%);border-color:rgba(99,102,241,0.2);grid-row:span 2">
+        <div style="position:absolute;top:-80px;right:-80px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(79,70,229,0.2) 0%,transparent 70%);pointer-events:none" aria-hidden="true"></div>
+
+        <div style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:14px;background:rgba(79,70,229,0.2);margin-bottom:24px" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/><path d="M7 8h.01M12 8h.01M17 8h.01M7 12h10"/></svg>
+        </div>
+
+        <h3 style="font-size:22px;font-weight:800;letter-spacing:-0.5px;margin-bottom:12px">Clasificación y enrutamiento automático con IA</h3>
+        <p style="font-size:15px;color:var(--text-secondary);line-height:1.7;margin-bottom:28px">
+          El motor de IA analiza el texto del caso en segundos, lo clasifica por tipo (petición, queja, reclamo o sugerencia), detecta la urgencia y lo asigna automáticamente al área responsable. Tu equipo recibe solo los casos que le corresponden, sin filtros manuales.
+        </p>
+
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;align-items:flex-start;gap:14px;padding:16px;background:rgba(255,255,255,0.04);border:1px solid var(--glass-border);border-radius:12px">
+            <div style="width:36px;height:36px;border-radius:9px;background:rgba(16,185,129,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="2.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <div>
+              <div style="font-size:14px;font-weight:700;margin-bottom:3px">Reducción del 70% en clasificación manual</div>
+              <div style="font-size:13px;color:var(--text-muted)">El equipo se enfoca en resolver, no en organizar</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;padding:16px;background:rgba(255,255,255,0.04);border:1px solid var(--glass-border);border-radius:12px">
+            <div style="width:36px;height:36px;border-radius:9px;background:rgba(6,182,212,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <div style="font-size:14px;font-weight:700;margin-bottom:3px">Tiempos de respuesta hasta 3× más rápidos</div>
+              <div style="font-size:13px;color:var(--text-muted)">Desde radicación hasta asignación en segundos</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;padding:16px;background:rgba(255,255,255,0.04);border:1px solid var(--glass-border);border-radius:12px">
+            <div style="width:36px;height:36px;border-radius:9px;background:rgba(245,158,11,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div>
+              <div style="font-size:14px;font-weight:700;margin-bottom:3px">Precisión del 94% en clasificación automática</div>
+              <div style="font-size:13px;color:var(--text-muted)">Entrenado con datos reales de copropiedades</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right column: 2 small cards -->
+      <div class="glass-card fade-up" style="padding:32px">
+        <div style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:12px;background:rgba(16,185,129,0.15);margin-bottom:18px" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3 style="font-size:17px;font-weight:700;margin-bottom:10px">Respuestas sugeridas por IA</h3>
+        <p style="font-size:14px;color:var(--text-secondary);line-height:1.65">
+          El administrador recibe borradores de respuesta generados automáticamente según el tipo de caso. Aprueba, edita y envía en segundos. Menos tiempo redactando, más tiempo gestionando.
+        </p>
+        <div style="margin-top:16px;display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--emerald)">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Aprende del estilo de tu copropiedad
+        </div>
+      </div>
+
+      <div class="glass-card fade-up" style="padding:32px">
+        <div style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:12px;background:rgba(244,63,94,0.12);margin-bottom:18px" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--rose)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        </div>
+        <h3 style="font-size:17px;font-weight:700;margin-bottom:10px">Análisis predictivo e insights</h3>
+        <p style="font-size:14px;color:var(--text-secondary);line-height:1.65">
+          Detecta patrones recurrentes antes de que escalen. La IA identifica zonas problemáticas, épocas de alta demanda y causas raíz, para que puedas actuar de forma preventiva en la gestión de tu propiedad horizontal.
+        </p>
+        <div style="margin-top:16px;display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--rose)">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Alertas tempranas automáticas
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1456,9 +1593,6 @@
         <ul>
           <li><a href="#features">Funcionalidades</a></li>
           <li><a href="#pricing">Precios</a></li>
-          <li><a href="#">Portal del residente</a></li>
-          <li><a href="#">Reportes</a></li>
-          <li><a href="#">API</a></li>
         </ul>
       </div>
 
@@ -1466,9 +1600,6 @@
         <h4>Empresa</h4>
         <ul>
           <li><a href="#">Nosotros</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Carreras</a></li>
-          <li><a href="#">Prensa</a></li>
           <li><a href="#">Contacto</a></li>
         </ul>
       </div>
@@ -1476,10 +1607,6 @@
       <div class="footer-col">
         <h4>Soporte</h4>
         <ul>
-          <li><a href="#">Centro de ayuda</a></li>
-          <li><a href="#">Documentación</a></li>
-          <li><a href="#">Estado del servicio</a></li>
-          <li><a href="#">Comunidad</a></li>
           <li><a href="#">Solicitar demo</a></li>
         </ul>
       </div>
