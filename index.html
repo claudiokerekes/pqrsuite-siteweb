@@ -622,12 +622,55 @@
       .compare-label { font-size: 11px; padding: 12px 10px; }
       .compare-cell { padding: 12px 8px; font-size: 11px; }
     }
-    @media (max-width: 560px) {
-      .compare-row,
-      [style*="grid-template-columns:200px 1fr 1fr 1fr"] {
-        grid-template-columns: 1fr 1fr 1fr 1fr !important;
+
+    /* ─── PRICING MOBILE CARDS ─── */
+    .pricing-plan-tabs { display: none; }
+    .plan-features-mobile { display: none; }
+    @media (max-width: 640px) {
+      #pricing { overflow-x: hidden; }
+      .pricing-label-cell { display: none !important; }
+      .pricing-header-grid {
+        display: flex !important;
+        flex-direction: column;
+        border-radius: var(--radius-xl) !important;
+        border-bottom: 1px solid var(--glass-border) !important;
       }
-      .compare-label { font-size: 10px; padding: 10px 8px; }
+      .pricing-plan-card {
+        display: block !important;
+        border-right: none !important;
+        border-left: none !important;
+        border-bottom: 1px solid var(--glass-border);
+      }
+      .pricing-plan-card:last-child { border-bottom: none !important; }
+      .plan-features-mobile {
+        display: block;
+        list-style: none;
+        margin: 16px 0 0;
+        padding: 0;
+        text-align: left;
+      }
+      .plan-features-mobile li {
+        font-size: 13px;
+        color: var(--text-secondary);
+        padding: 5px 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .plan-features-mobile li::before {
+        content: '\2713';
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 18px; height: 18px;
+        border-radius: 50%;
+        background: rgba(16,185,129,0.15);
+        color: var(--emerald);
+        font-size: 10px;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .pricing-comparison-table { display: none !important; }
     }
 
     /* ─── TESTIMONIALS ─── */
@@ -1381,7 +1424,7 @@
 </section>
 
 <!-- ═══════════════════ PRICING ═══════════════════ -->
-<section class="section" id="pricing" aria-labelledby="pricing-heading">
+<section class="section" id="pricing" aria-labelledby="pricing-heading" data-active-plan="starter">
   <div class="container">
     <div class="section-header fade-up">
       <span class="badge">Precios</span>
@@ -1390,15 +1433,15 @@
     </div>
 
     <!-- ── Plan header cards ── -->
-    <div class="fade-up" style="display:grid;grid-template-columns:200px 1fr 1fr 1fr;gap:0;border-radius:var(--radius-xl) var(--radius-xl) 0 0;overflow:hidden;border:1px solid var(--glass-border);border-bottom:none">
+    <div class="fade-up pricing-header-grid" style="display:grid;grid-template-columns:200px 1fr 1fr 1fr;gap:0;border-radius:var(--radius-xl) var(--radius-xl) 0 0;overflow:hidden;border:1px solid var(--glass-border);border-bottom:none">
 
       <!-- empty top-left cell -->
-      <div style="background:var(--bg-elevated);padding:28px 24px;border-right:1px solid var(--glass-border)">
+      <div class="pricing-label-cell" style="background:var(--bg-elevated);padding:28px 24px;border-right:1px solid var(--glass-border)">
         <div style="font-size:12px;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.8px;margin-top:auto">Características</div>
       </div>
 
       <!-- Starter -->
-      <div style="background:var(--bg-elevated);padding:28px 24px;border-right:1px solid var(--glass-border);text-align:center">
+      <div class="pricing-plan-card" style="background:var(--bg-elevated);padding:28px 24px;border-right:1px solid var(--glass-border);text-align:center">
         <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);margin-bottom:10px">Starter</div>
         <div style="display:flex;align-items:flex-end;justify-content:center;gap:3px;margin-bottom:6px">
           <span style="font-size:13px;font-weight:600;color:var(--text-secondary);padding-bottom:4px">$</span>
@@ -1406,10 +1449,16 @@
         </div>
         <div style="font-size:12px;color:var(--text-muted);margin-bottom:20px">COP / mes</div>
         <a href="https://wa.me/573145678786?text=Hola%2C%20me%20interesa%20el%20plan%20Starter%20de%20PQR%20Suite" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="width:100%;justify-content:center;font-size:13px;padding:10px 16px" onclick="gtag('event','whatsapp_click',{event_category:'pricing',event_label:'starter'})">Comenzar</a>
+        <ul class="plan-features-mobile">
+          <li>Hasta 100 unidades residenciales</li>
+          <li>Hasta 5 usuarios administradores</li>
+          <li>Radicación y seguimiento de PQR</li>
+          <li>Grupos, minutas y actas</li>
+        </ul>
       </div>
 
       <!-- Esencial (featured) -->
-      <div style="background:linear-gradient(180deg,rgba(79,70,229,0.18) 0%,rgba(79,70,229,0.08) 100%);padding:28px 24px;border-right:1px solid rgba(99,102,241,0.3);border-left:1px solid rgba(99,102,241,0.3);text-align:center;position:relative">
+      <div class="pricing-plan-card" style="background:linear-gradient(180deg,rgba(79,70,229,0.18) 0%,rgba(79,70,229,0.08) 100%);padding:28px 24px;border-right:1px solid rgba(99,102,241,0.3);border-left:1px solid rgba(99,102,241,0.3);text-align:center;position:relative">
         <div style="position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--accent),var(--accent-light));padding:3px 14px;border-radius:0 0 10px 10px;font-size:11px;font-weight:700;color:#fff;white-space:nowrap;box-shadow:0 0 14px var(--accent-glow)">⭐ Recomendado</div>
         <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--accent-light);margin-bottom:10px;margin-top:8px">Esencial</div>
         <div style="display:flex;align-items:flex-end;justify-content:center;gap:3px;margin-bottom:6px">
@@ -1418,10 +1467,16 @@
         </div>
         <div style="font-size:12px;color:var(--text-muted);margin-bottom:20px">COP / mes</div>
         <a href="https://wa.me/573145678786?text=Hola%2C%20me%20interesa%20el%20plan%20Esencial%20de%20PQR%20Suite" target="_blank" rel="noopener noreferrer" class="btn-primary" style="width:100%;justify-content:center;font-size:13px;padding:10px 16px" onclick="gtag('event','whatsapp_click',{event_category:'pricing',event_label:'esencial'})">Solicitar demo</a>
+        <ul class="plan-features-mobile">
+          <li>Hasta 300 unidades residenciales</li>
+          <li>Hasta 15 usuarios administradores</li>
+          <li>Mailing masivo con confirmación de lectura</li>
+          <li>Todo lo del plan Starter</li>
+        </ul>
       </div>
 
       <!-- Pro AI -->
-      <div style="background:var(--bg-elevated);padding:28px 24px;text-align:center">
+      <div class="pricing-plan-card" style="background:var(--bg-elevated);padding:28px 24px;text-align:center">
         <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);margin-bottom:10px">
           Pro <span style="background:linear-gradient(135deg,var(--cyan),var(--accent-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">AI</span>
         </div>
@@ -1431,11 +1486,17 @@
         </div>
         <div style="font-size:12px;color:var(--text-muted);margin-bottom:20px">COP / mes</div>
         <a href="https://wa.me/573145678786?text=Hola%2C%20me%20interesa%20el%20plan%20Pro%20AI%20de%20PQR%20Suite" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="width:100%;justify-content:center;font-size:13px;padding:10px 16px" onclick="gtag('event','whatsapp_click',{event_category:'pricing',event_label:'pro_ai'})">Solicitar demo</a>
+        <ul class="plan-features-mobile">
+          <li>Hasta 400 unidades residenciales</li>
+          <li>Hasta 25 usuarios administradores</li>
+          <li>Recepción de PQR por WhatsApp</li>
+          <li>Inteligencia Artificial incluida</li>
+        </ul>
       </div>
     </div>
 
     <!-- ── Comparison rows ── -->
-    <div class="fade-up" style="border:1px solid var(--glass-border);border-radius:0 0 var(--radius-xl) var(--radius-xl);overflow:hidden" role="table" aria-label="Comparativa de planes">
+    <div class="fade-up pricing-comparison-table" style="border:1px solid var(--glass-border);border-radius:0 0 var(--radius-xl) var(--radius-xl);overflow:hidden" role="table" aria-label="Comparativa de planes">
 
       <!-- Section: Capacidad -->
       <div style="background:rgba(255,255,255,0.02);padding:10px 24px;border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border)" role="rowgroup">
