@@ -5,7 +5,10 @@
       "Bash(python3 scripts/search.py \"saas property management complaint petition platform professional dark\" --design-system -p \"PQR Platform\" -f markdown)",
       "Bash(python3 scripts/search.py \"glassmorphism dark gradient\" --domain style -n 3)",
       "Bash(python3 scripts/search.py \"saas b2b enterprise landing\" --domain landing -n 3)",
-      "Bash(grep -E '\\\\.\\(html|css|js\\)$')"
+      "Bash(grep -E '\\\\.\\(html|css|js\\)$')",
+      "Bash(python3 *)",
+      "Bash(convert --version)",
+      "Bash(node -e \"require\\('sharp'\\); console.log\\('sharp ok'\\)\")"
     ]
   }
 }
