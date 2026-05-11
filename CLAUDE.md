@@ -23,6 +23,8 @@ sitio_web_pqr/
 ├── styles.css              # CSS compartido por todas las páginas
 ├── favicon.svg             # Ícono del sitio
 ├── apple-touch-icon.png    # Ícono iOS 180×180px (degradado #4F46E5 → #06B6D4)
+├── og-image.png            # OG image 1200×630px (screenshot de og-image.html)
+├── og-image.html           # Fuente HTML para regenerar la og-image
 ├── sitemap.xml             # Sitemap enviado a Google Search Console
 ├── robots.txt              # Allow: *, Sitemap: https://pqrsuite.com/sitemap.xml
 └── CNAME                   # pqrsuite.com (GitHub Pages)
@@ -86,6 +88,12 @@ Enviado a Google Search Console. Contiene las 5 URLs:
 - `https://pqrsuite.com/precios.html`
 - `https://pqrsuite.com/demo.html`
 - `https://pqrsuite.com/contacto.html`
+
+### Open Graph / Twitter Cards (mayo 2026)
+- `og-image.png` creada (1200×630px, dark glassmorphism, tipografía del sitio)
+- `og-image.html` es la fuente — abrir en Chrome 1200×630 y hacer screenshot para regenerar
+- Todas las páginas tienen: `og:title`, `og:description`, `og:image`, `og:url`, `og:type`, `twitter:card`, `twitter:image`
+- Cada página tiene su propio `og:title` y `og:description` con el contenido específico
 
 ### Estado backlinks (abril 2026)
 - 1 backlink, 1 dominio de referencia → sitio nuevo, requiere estrategia off-page
